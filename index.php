@@ -57,10 +57,10 @@ $proizvodjac = $_GET['PR'];
 
         <div class="card_article_description">
           <p>Artikal izrađen po specifikaciji i dizajnu preduzeća za proizvodnju, trgovinu i usluge Deltateks - EXPORT - IMPORT D.O.O.</p>
-          <p style="padding-top: 8px">Adresa: Pilota Mihaila Petrovića 81, 11090 Beograd</p>
-          <p style="padding-top: 8px"><strong>Proizvođač: </strong> <?php echo $proizvodjac; ?></p>
-          <p style="padding-top: 4px"><strong>Zemlja porekla:</strong> <?php echo $poreklo; ?></p>
-          <p style="padding-top: 4px"><strong>Uvoznik za Srbiju:</strong> Deltateks D.O.O.</p>
+          <p style="padding-top: 10px">Adresa: Pilota Mihaila Petrovića 81, 11090 Beograd</p>
+          <p style="padding-top: 10px"><strong>Proizvođač: </strong> <?php echo $proizvodjac; ?></p>
+          <p style="padding-top: 6px"><strong>Zemlja porekla:</strong> <?php echo $poreklo; ?></p>
+          <p style="padding-top: 6px"><strong>Uvoznik za Srbiju:</strong> Deltateks D.O.O.</p>
         </div>
 
         <div class="card_social clearfix">
