@@ -12,6 +12,8 @@ if ($_GET['PO'] == 1) {
   $poreklo = "Severna Makedonija";
 } else if ($_GET['PO'] == 6) {
   $poreklo = "Pakistan";
+} else if ($_GET['PO'] == 7) {
+  $poreklo = "Srbija";
 } else {
   $poreklo = "Greška pri učitavanju QR koda";
 }
@@ -30,8 +32,8 @@ $proizvodjac = $_GET['PR'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="title" content="QR deklaracija | Deltateks DOO Beograd" />
-  <meta name="description" content="Qr deklaracija proizvoda proizvedenih po specifikaciji i dizajnu preduzeća Deltateks D.O.O." />
+  <meta name="title" content="QR deklaracija | Deltateks DOO Beograd">
+  <meta name="description" content="Qr deklaracija proizvoda proizvedenih po specifikaciji i dizajnu preduzeća Deltateks D.O.O.">
 
   <title>Specifikacija | Deltateks DOO Beograd</title>
 
@@ -50,17 +52,24 @@ $proizvodjac = $_GET['PR'];
 
         <!-- https://qr-deklaracija.deltateks.rs?PR=Deltateks+D.O.O.&PO=2&ART=Peškir+Vez -->
 
-
         <div class="card_company">Deltateks D.O.O.</div>
 
         <div class="card_article"><?php echo $artikal; ?></div>
 
         <div class="card_article_description">
           <p>Artikal izrađen po specifikaciji i dizajnu preduzeća za proizvodnju, trgovinu i usluge Deltateks - EXPORT - IMPORT D.O.O.</p>
-          <p style="padding-top: 10px">Adresa: Pilota Mihaila Petrovića 81, 11090 Beograd</p>
-          <p style="padding-top: 10px"><strong>Proizvođač: </strong> <?php echo $proizvodjac; ?></p>
-          <p style="padding-top: 6px"><strong>Zemlja porekla:</strong> <?php echo $poreklo; ?></p>
-          <p style="padding-top: 6px"><strong>Uvoznik za Srbiju:</strong> Deltateks D.O.O.</p>
+          <p style="padding-top: 8px">Adresa: Pilota Mihaila Petrovića 81, 11090 Beograd</p>
+          <p style="padding-top: 8px"><strong>Proizvođač: </strong>
+            <?php echo $proizvodjac; ?></p>
+          <p style="padding-top: 4px"><strong>Zemlja porekla: </strong>
+            <?php echo $poreklo; ?></p>
+
+          <?php if ($poreklo == "Srbija") { ?>
+            <p class="uvoznik" style="display:none"></p>
+          <?php } else { ?>
+            <p class="uvoznik" style="padding-top: 4px"><strong>Uvoznik za Srbiju: </strong> Deltateks D.O.O.</p>
+          <?php  } ?>
+
         </div>
 
         <div class="card_social clearfix">
